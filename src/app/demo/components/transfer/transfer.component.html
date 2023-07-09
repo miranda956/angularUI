@@ -1,0 +1,23 @@
+<div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <h5>Funds Transfer</h5>
+        <div class="p-fluid p-formgrid grid">
+          <div class="field col-12 md:col-6">
+            <label for="debitAccount">Debit Account</label>
+            <p-dropdown [options]="accountOptions" optionLabel="name" [(ngModel)]="selectedDebitAccount"></p-dropdown>
+          </div>
+          <div class="field col-12 md:col-6">
+            <label for="creditAccount">Credit Account</label>
+            <p-dropdown [options]="accountOptions" optionLabel="name" [(ngModel)]="selectedCreditAccount"></p-dropdown>
+          </div>
+          <div class="field col-12">
+            <label for="transferAmount">Transfer Amount</label>
+            <input pInputText id="transferAmount" type="number" [(ngModel)]="transferAmount" />
+          </div>
+          <button pButton label="Transfer" (click)="transferFunds()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
